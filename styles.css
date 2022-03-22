@@ -1,0 +1,106 @@
+.wordles-wrapper {
+  text-align: center;
+  height: auto;
+  background: #1f1f1f;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8vh 4vw;
+}
+
+.wordles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wordle {
+  color: #f8f1ff;
+  margin: 24px;
+  position: relative;
+  height: 256px;
+  width: 256px;
+  border: 2px solid white;
+}
+
+.wordle img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wordle-overlay {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.wordle:hover .wordle-overlay {
+  color: #f8f1ff;
+  opacity: 0.8;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 95%;
+}
+
+.overlay-text-header {
+  font-size: 30px;
+}
+
+.overlay-text-details {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1000px) {
+  .wordle {
+    height: 192px;
+    width: 192px;
+    border: 2px solid white;
+    margin: 12px;
+  }
+
+  .overlay-text-header {
+    font-size: 24px;
+  }
+  
+  .overlay-text-details {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wordle {
+    height: 128px;
+    width: 128px;
+    border: 2px solid white;
+    margin: 6px;
+  }
+
+  .overlay-text-header {
+    font-size: 18px;
+  }
+  
+  .overlay-text-details {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
